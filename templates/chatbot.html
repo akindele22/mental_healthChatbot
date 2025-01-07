@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <div class="avatar">
+            <img src="https://via.placeholder.com/50" alt="Avatar">
+        </div>
+        <div class="chat-info">
+            <h4>Chat with Mental Health Bot</h4>
+            <span>We're online</span>
+        </div>
+        <div class="chat-settings">
+            <button class="settings-btn">⚙️</button>
+        </div>
+    </div>
+
+    <div class="chat-box" id="chat-box">
+        <!-- Chat messages will be displayed here -->
+    </div>
+
+    <div class="chat-footer">
+        <div class="emoji-section">
+            <button class="emoji-btn">😊</button>
+        </div>
+        <input type="text" id="user_input" placeholder="Enter your message..." autocomplete="off">
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+</body>
+</html>

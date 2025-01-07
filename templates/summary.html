@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .summary-container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="summary-container">
+        <h2>Session Summary</h2>
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Session Length</td>
+                <td>{{ metrics.session_length }}</td>
+            </tr>
+            <tr>
+                <td>Total Responses</td>
+                <td>{{ metrics.total_responses }}</td>
+            </tr>
+            <tr>
+                <td>Average Response Time</td>
+                <td>{{ metrics.average_response_time }} seconds</td>
+            </tr>
+            <tr>
+                <td>Average Sentiment</td>
+                <td>{{ metrics.avg_sentiment }}</td>
+            </tr>
+            <tr>
+                <td>User Satisfaction</td>
+                <td>{{ metrics.user_satisfaction }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
